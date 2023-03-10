@@ -5,7 +5,7 @@ n = len(sys.argv)
 
 if (n == 1):
     print("0 arguments.")
-else:
+elif (n > 1):
     for i in range(1, n):
-        print('{}'.format(sys.argv[i], end=" "))
+        print('{}'.format(i, end=" "))
 
