@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-def uniq_add(my_list=[]):
 # Function that adds all integers in a list
+def uniq_add(my_list=[]):
     res = set(my_list)
     n = 0
 
