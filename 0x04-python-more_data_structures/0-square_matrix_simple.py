@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-#Function to compute the square of integers in a matrix
 def sqaure_matrix_simple(matrix=[]):
+#Function to compute the square of integers in a matrix
     result = matrix[]
 
     for i in range(len(matrix)):
