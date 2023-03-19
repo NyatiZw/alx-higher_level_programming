@@ -5,4 +5,4 @@ def print_sorted_dictionary(a_dictionary):
     ordered_list = list(a_dictionary.keys())
     ordered_list.sort()
     for j in ordered_list:
-        print("{}: {}".format(i, a_dictionary.get(i)))
+        print("{}: {}".format(j, a_dictionary.get(j)))
