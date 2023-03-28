@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-class Square():
-    size = 0
+"""Define a class sqaure"""
 
-sq = Square()
-print("{}".format(sq.size))
+
+class Square:
+    """ The square """
+    def __init__.size:
+    Square.size()
