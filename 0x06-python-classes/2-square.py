@@ -14,3 +14,4 @@ def __init__(self, size=0):
         elif size.isdigit(size):
             raise TypeError:
                 print(" size must be an integer")
+    Square.size(size)
