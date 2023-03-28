@@ -3,4 +3,4 @@ class Square():
     pass
 
 sq = square()
-
+print("{}".format(sq))
