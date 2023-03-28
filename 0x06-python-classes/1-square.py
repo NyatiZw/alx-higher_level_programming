@@ -2,5 +2,5 @@
 class Square():
     size = 0
 
-sq = Square(size)
-print("{}".format(sq)) 
+sq = Square()
+print("{}".format(sq.size)) 
