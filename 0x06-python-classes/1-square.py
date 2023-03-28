@@ -5,12 +5,12 @@
 class Square:
     """Interstate Square
     Attributes:
-        size (int): size of square
+        __size (int): size of square
     """"
     def __init__(self, size):
         """Initialize square
-        args:
-            size int: size of square
-        return: None
+        Args:
+            size (int): size of square
+        Returns: None
         """
-        self.size = size
+        self.__size = size
