@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-class Square():
+class Square:
     size = 0
 
-sq = Square()
-print("{}".format(sq.size)) 
+    def __init__(self, size):
+        args:
+            size:
+        return: None
+
+        self.size = size
