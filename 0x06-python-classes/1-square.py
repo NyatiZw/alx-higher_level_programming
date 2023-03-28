@@ -1,10 +1,16 @@
 #!/usr/bin/python3
+"""Define class"""
+
+
 class Square:
-    size = 0
-
+    """Interstate Square
+    Attributes:
+        size (int): size of square
+    """"
     def __init__(self, size):
+        """Initialize square
         args:
-            size:
+            size int: size of square
         return: None
-
+        """
         self.size = size
