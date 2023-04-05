@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import __0-rectangle.py__
 
 """Defines class Rectangle"""
 
