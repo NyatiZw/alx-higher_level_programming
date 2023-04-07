@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Function to divide integers"""
+"""
+
+Function to divide integers
+
+"""
 
 
 def matrix_divided(matrix, div):
@@ -20,9 +24,10 @@ def matrix_divided(matrix, div):
 
         ZeroDivisionError: if div is zero
 
+
     """
 
-    if not type(div) in (int, float):
+    if not div in (int, float):
         rasie TypeError("div must be a number")
 
     if div == 0:
