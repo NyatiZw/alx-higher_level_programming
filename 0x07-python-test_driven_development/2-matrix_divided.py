@@ -43,4 +43,16 @@ def matrix_divided(matrix, div):
 
     for elements in matrix:
         if not elements or not isinstance(elements, list):
-            raise TypeError("elements must be an integer")
+            raise TypeError(message_type)
+
+        if len_e != 0 and len(elements) != len_e:
+            raise TypeError(message_size)
+
+        for num in elements:
+            if not type(num) in (int, float):
+                raise TypeError(message_type)
+
+        len_e  = len(elements)
+
+    m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return (m)
