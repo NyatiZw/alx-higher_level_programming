@@ -25,9 +25,9 @@ def say_my_name(first_name, last_name=""):
     type_error_message_lname = "last_name must be a string"
 
     if not isinstance(first_name, str):
-        raise: TypeError(type_error_message_fname)
+        raise TypeError(type_error_message_fname)
 
     if not isinstance(last_name, str):
-        raise: TypeError(type_error_message_lname)
+        raise TypeError(type_error_message_lname)
 
     print("My name is {} {}".format(first_name, last_name))
