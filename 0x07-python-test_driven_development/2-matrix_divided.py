@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""
-
-
-Function to divide integers
-
-"""
+"""Function to divide integers"""
 
 
 def matrix_divided(matrix, div):
@@ -24,7 +19,6 @@ def matrix_divided(matrix, div):
                    if list is not same size
 
         ZeroDivisionError: if div is zero
-
 
     """
 
