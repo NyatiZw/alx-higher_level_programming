@@ -38,4 +38,3 @@ Passing a float
 Passing zero
     >>> print_square(0)
     
-
