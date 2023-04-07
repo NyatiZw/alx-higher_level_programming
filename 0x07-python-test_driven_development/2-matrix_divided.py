@@ -33,26 +33,26 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    message_type = "matrix must be a matrix (list of list) of integers/floats"
+    error_type_message = "matrix must be a matrix (list of list) of integers/floats"
 
     if not matrix or not isinstance(matrix, list):
-        raise TypeError(message_type)
+        raise TypeError(error_type_message)
 
-    len_e = 0
-    message_size = "Each row of the matrix must have the same size"
+    length = 0
+    error_size_message = "Each row of the matrix must have the same size"
 
     for elements in matrix:
         if not elements or not isinstance(elements, list):
-            raise TypeError(message_type)
+            raise TypeError(error_type_message)
 
-        if len_e != 0 and len(elements) != len_e:
-            raise TypeError(message_size)
+        if length != 0 and len(elements) != length:
+            raise TypeError(error_size_message)
 
-        for num in elements:
-            if not type(num) in (int, float):
-                raise TypeError(message_type)
+        for number in elements:
+            if not type(number) in (int, float):
+                raise TypeError(error_type_message)
 
-        len_e  = len(elements)
+        length = len(elements)
 
     m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
     return (m)

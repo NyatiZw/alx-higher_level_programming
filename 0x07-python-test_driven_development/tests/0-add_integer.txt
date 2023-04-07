@@ -19,7 +19,7 @@ Adding 2.1 and 98
    >>> add_integer(2.1)
    100
 
-Subtracting 100.3 and 2
+Subtracting 100.3 and -2
             >>> add_integer(100.3, -2)
             98
 
@@ -36,13 +36,13 @@ Passing None
    TypeError: a must be an integer
 
 Adding a letter and a number
-   >>> add_integer ('1', 1)
+   >>> add_integer ('a', 1)
    Traceback (most recent call last)
            ...
    TypeError: a must be an integer
 
 Adding two letters
-    >>> add_integer('2', '1')
+    >>> add_integer('z', 'y')
     Traceback (most recent call last)
            ...
     TypeError: b must ba an integer
