@@ -5,64 +5,54 @@ Using ``matrix_divided``
 ---------------------
 
 Importing function from the module:
-
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-Dividing matrix by 3:
-
+Dividing matrix by 3
    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
-Dividing by  0:
-
+Dividing by  0
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
-    Traceback (most recent call last):
+    Traceback (most recent call last)
               ...
     ZeroDivisionError: division by zero
 
-Dividing a matrix by a float number:
-
+Dividing a matrix by a float number
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2.5)
     [[9.8, 6.75, 5.76], [0.25, 5.77, 2.3]], 0.0)
 
-Passing empty matrix:
-
+Passing empty matrix
    >>> matrix_divided([], 2)
-   Traceback (most recent call last):
+   Traceback (most recent call last)
              ...
    TypeError: matrix must be a matrix (list of list) of integers/floats 
 
-Passing a tuple:
-
+Passing a tuple
    >>> matrix_divided((66, 9, 5), 2)
-   Traceback (most recent call last):
+   Traceback (most recent call last)
             ...
    TypeError: matrix must be a matrix (list of list) of integers/floats
 
-Dividing were rows do not match:
-
+Dividing were rows do not match
    >>> matrix_divided([[3, 9] , [8, 5, 2]], 5)
-   Traceback (most recent call last):
+   Traceback (most recent call last)
             ...
    TypeError: Each row of matrix must have the same size
 
-Dividing by none integers:
-
+Dividing by none integers
    >>> matrix_divided(["Simba", "Hanga"], ["Hello", "World"]], 3)
-   Traceback (most recent call last):
+   Traceback (most recent call last)
            ...
    TypeError: matrix must be a matrix (list of list) of integers/floats
 
-Dividing by mixed integers and none integers:
-
+Dividing by mixed integers and none integers
     >>> matrix_divided([6, 5, 3], ["School", 2.5, '5'], 2)
-    Traceback (most recent call last):
+    Traceback (most recent call last)
            ...
    TypeError: matrix must be a matrix (list of list) of integers/floats
 
-Dividing with a string:
-
+Dividing with a string
     >>> matrix_divided([[20, 25], [10, 5]], '2')
-    Traceback (most recent call last):
+    Traceback (most recent call last)
             ...
     TypeError: div must be an integer
