@@ -4,12 +4,16 @@
 Class MyList that inherits from list
 """
 class list:
-    def __init__(self, int):
-        return
+    def __init__(self):
+        self.list[] = int(list)
 
-class  MyList(list):
+class MyList(list):
     def __init__(self, list):
         return
 
+        list.__init__(self,list)
+
 def print_sorted(self):
-    print(self.list.sort)
+    a = MyList.sort
+    print("{}".format(a))
+
