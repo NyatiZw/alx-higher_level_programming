@@ -5,8 +5,4 @@ Using ``my_list``
 ________________________
 
 Importing function from the module:
-    >>> my-list = __import__('1-my_list').lookup
-
-Looking up obj
-    >>> my_list.append(1)
-    1
+    >>> MyList = __import__('1-my_list').MyList
