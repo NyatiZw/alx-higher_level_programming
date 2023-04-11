@@ -4,9 +4,8 @@
 Class MyList that inherits from list
 """
 class MyList(list):
-    def __init__(self):
-        return
+    pass
 
-class list:
-    def __init__(self):
-        return
+    def print_sorted(self):
+
+        print(sorted(self))
