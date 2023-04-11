@@ -3,7 +3,10 @@
 
 Class MyList that inherits from list
 """
-
 class MyList(list):
     def __init__(self):
-        pass
+        return
+
+class list:
+    def __init__(self):
+        return
