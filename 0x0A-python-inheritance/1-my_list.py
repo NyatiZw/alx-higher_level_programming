@@ -3,12 +3,17 @@
 
 Class MyList that inherits from list
 """
-class list:
-    def __init__(self):
-        self.list = list
 
-class MyList(list):
-    def __init__(self, list):
-        return
+def print_sorted(self):
 
-        list.__init__(self,list)
+    class list(object):
+
+        def __init__(self, list):
+            self.list = list
+
+    class MyList(list):
+
+        def __init__(self, list):
+            self.list = list
+
+            MyList.__init__(self, list)
