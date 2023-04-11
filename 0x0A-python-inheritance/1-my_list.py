@@ -4,7 +4,7 @@
 Class MyList that inherits from list
 """
 class list:
-    def __init__(self):
+    def __init__(self, list):
         self.list[] = int(list)
 
 class MyList(list):
@@ -14,6 +14,4 @@ class MyList(list):
         list.__init__(self,list)
 
 def print_sorted(self):
-    a = MyList.sort
-    print("{}".format(a))
-
+    MyList.sort()
