@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 def lookup(obj):
-    print("{}".format(dir()))
+    print("{}".format(dir(obj)))
