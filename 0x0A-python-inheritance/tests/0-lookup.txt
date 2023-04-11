@@ -1,0 +1,12 @@
+The ``0-lookup`` module
+========================
+
+Using ``lookup(obj)``
+________________________
+
+Importing function from the module:
+    >>> lookup = __import__('0-lookup').lookup
+
+Looking up obj
+    >>> lookup(obj)
+    obj
