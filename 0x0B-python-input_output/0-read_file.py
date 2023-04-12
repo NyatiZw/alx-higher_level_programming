@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 """
 Function to read text file
-
-
 """
-
 
 def read_file(filename=""):
     """Function to read text file
