@@ -13,3 +13,10 @@ class Rectangle(BG):
         self.__height = height
         self.integer_validator('width', width)
         self.integer_validator('height', height)
+
+    def area(self):
+        return width * height
+
+    def str(self):
+        """string element in print statement"""
+        return("[Rectangle] " + str(width) + "/" + str(height))
