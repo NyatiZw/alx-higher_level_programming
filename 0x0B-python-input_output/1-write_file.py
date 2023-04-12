@@ -19,5 +19,5 @@ def read_file(filename="", text=""):
         f.write = text
 
     with open("filename", encoding="utf-8") as f:
-        print("{:s}".format(f.read))
+        print(f.read())
 
