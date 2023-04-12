@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Function to write text file
 
@@ -7,6 +6,7 @@ Function to write text file
 
 
 def write_file(filename="", text=""):
+
     """Function to write text file
 
     Args:
