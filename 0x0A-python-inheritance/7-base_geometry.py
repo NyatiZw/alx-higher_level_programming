@@ -10,11 +10,11 @@ class BaseGeometry:
     Raise: Exception
     """
 
-    def __init__area(self):
+    def area(self):
         """ raises exception """
         raise Exception("area() is not implemented")
 
-    def __init__integer_validator(self, name, value):
+    def integer_validator(self, name, value):
         """ensures value is int greater than 0"""
         if type(value) is not int:
             raise TypeError("{:s} must be an integer".format(name))
