@@ -15,4 +15,4 @@ def read_file(filename=""):
     """
 
     with open("filename", encoding="utf-8") as f:
-        print("{:s}".format(f.read))
+        read_file = f.read()
