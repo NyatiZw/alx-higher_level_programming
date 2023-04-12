@@ -16,7 +16,7 @@ def read_file(filename="", text=""):
     """
 
     with open("filename", "w", encoding="utf-8") as f:
-        text = f.write
+        f.write = text
 
     with open("filename", encoding="utf-8") as f:
         print("{:s}".format(f.read))
