@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
 """
 Function to read text file
+
 
 """
 
@@ -13,6 +13,7 @@ def read_file(filename=""):
         filename: files name
 
     """
+
 
     with open("filename", encoding="utf-8") as f:
         return
