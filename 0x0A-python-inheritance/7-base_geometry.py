@@ -10,6 +10,6 @@ class BaseGeometry:
     Raise: Exception
     """
 
-    def __init__area(self):
+    def __init__(self):
         raise Exception("area() is not implemented")
 
