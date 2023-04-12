@@ -2,6 +2,7 @@
 """
 Function to read text file
 
+
 """
 
 def read_file(filename=""):
