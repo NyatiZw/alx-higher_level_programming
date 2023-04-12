@@ -6,7 +6,7 @@ Function to write text file
 """
 
 
-def read_file(filename="", text=""):
+def write_file(filename="", text=""):
     """Function to write text file
 
     Args:
