@@ -21,4 +21,3 @@ def read_file(filename="", text=""):
 
     with open("filename", encoding="utf-8") as f:
         print("{}".format(length.read))
-
