@@ -15,7 +15,8 @@ def read_file(filename="", text=""):
 
     """
 
-    with open("filename", "rw", encoding="utf-8") as f:
+    with open("filename", "w", encoding="utf-8") as f:
         f.write = text
-        print(f.read)
+        length = len(text)
+        return length
 
