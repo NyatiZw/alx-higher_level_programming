@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Class geometry module 
+Class geometry module
 """
 
 
 class BaseGeometry:
     """ Public class instance
-    
+
     Raise: Exception
     """
 
