@@ -9,7 +9,7 @@ import json
 import sys
 
 
-def add_item:
+if __name__ == "__main__"
 
     """Script to add arguments to json objectresentation"""
 
