@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import json
 
 """
 Function that rturns the JSON representation of an object
 
+
 """
+import json
 
 
 def to_json_string(my_obj):
@@ -17,5 +18,4 @@ def to_json_string(my_obj):
     Return: json object
 
     """
-
-    return json.dump(my_obj)
+    return json.dumps(my_obj)
