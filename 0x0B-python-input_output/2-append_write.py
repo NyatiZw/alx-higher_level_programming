@@ -5,7 +5,7 @@ Function to append text file
 """
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
 
     """Function to append text file
 
