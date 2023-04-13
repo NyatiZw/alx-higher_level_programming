@@ -17,7 +17,7 @@ if __name__ == "__main__":
     load_from_json_file =
     __import__('6-load_from_json_file').load_from_json_file
 
-    fname = ""
+    fname = "add_item.json"
 
     pylist = []
     if len(sys.argv) >= 1:
