@@ -16,4 +16,4 @@ def read_file(filename=""):
 
     with open(filename) as f:
         read_file = f.read()
-        print("{}".format(read_file, end=""))
+        print("{:s}".format(read_file, end=""))
