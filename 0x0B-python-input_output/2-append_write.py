@@ -7,7 +7,7 @@ Function to append text file
 
 def append_file(filename="", text=""):
 
-    """Function to write text file
+    """Function to append text file
 
     Args:
         filename: files name
@@ -16,8 +16,4 @@ def append_file(filename="", text=""):
     """
 
     with open("filename", "a", encoding="utf-8") as f:
-        text = f.write
-        length = len(text)
-
-    with open("filename", encoding="utf-8") as f:
-        print("{}".format(length.read))
+        return f.append(text) 
