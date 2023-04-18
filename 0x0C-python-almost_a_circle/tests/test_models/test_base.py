@@ -21,10 +21,10 @@ class TestBase_instantiation(unittest.TestCase):
     def test_public_id(self):
         b1 = Base(7)
         b1.id = 1
-        self.assertEqual(15, b.id)
+        self.assertEqual(1, b1.id)
 
     def test_string_id(self):
-        self.assertEqual("World", Base("Wprld").id)
+        self.assertEqual("World", Base("World").id)
 
     def test_range(self):
         self.assertEqual(range(5), Base(range(5)).id)
