@@ -5,7 +5,7 @@ import unittest
 from models.base import Base
 
 
-class TestBase_instantiation(unitttest.TestCase):
+class TestBase_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def test_no_args(self):
@@ -22,3 +22,9 @@ class TestBase_instantiation(unitttest.TestCase):
         b1 = Base(7)
         b1.id = 1
         self.assertEqual(15, b.id)
+
+    def test_string_id(self):
+        self.assertEqual("World", Base("Wprld").id)
+
+    def test_range(self):
+        self.assertEqual(range(5), Base(range(5)).id)
