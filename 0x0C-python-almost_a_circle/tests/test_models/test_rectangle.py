@@ -5,7 +5,7 @@ import unittest
 from models.rectangle import Rectangle
 
 
-class TestBase_instantiation(unittest.TestCase):
+class TestRectangle_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def test_no_args(self):
