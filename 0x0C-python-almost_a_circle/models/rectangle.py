@@ -1,10 +1,18 @@
 #!/usr/bin/python3
+""" Class rectangle that inherits from base """
 
 from .base import Base
 
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initialize the rectangle class
+        Args:
+            width: width element of rectangle
+            height: height element of rectangle
+            x: integer value
+            y: integer value
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
