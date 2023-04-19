@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Defines unittests for base class """
-import os
+import io
 import sys
 import unittest
 from models.base import Base
@@ -11,18 +11,18 @@ class TestRectangle_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def test_no_args(self):
-        r1 = Ractangle()
-        r2 = Ractangle()
-        self.assertEqual(r1.id, r2.id - 1)
+        _r1 = Ractangle()
+        _r2 = Ractangle()
+        self.assertEqual(_r1.id, _r2.id - 1)
 
     def test_none(self):
-        r1 = Rectangle(None)
-        r2 = Rectangle(None)
-        self.assertEqual(r1.id, r2.id - 1)
+        _r1 = Rectangle(None)
+        _r2 = Rectangle(None)
+        self.assertEqual(_r1.id, _r2.id - 1)
 
     def test_public_id(self):
-        r1 = Rectangle(7)
-        r1.id = 1
+        _r1 = Rectangle(7)
+        _r1.id = 1
         self.assertEqual(1, r1.id)
 
     def test_string_id(self):
@@ -30,3 +30,6 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(range(5), Rectangle(range(5)).id)
+
+if __name__ == "__main__":
+    unittest.main()
