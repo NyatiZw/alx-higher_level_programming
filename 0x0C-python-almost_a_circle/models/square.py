@@ -10,4 +10,4 @@ class Square(Rectangle):
         self.size = size
         self.x = x
         self.y = y
-        super().__init__.Rectangle(id, x, y, width, height)
+        super().__init__Rectangle(id, x, y, width, height)
