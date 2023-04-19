@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines unittests for base class """
 import os
+import sys
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -11,7 +12,7 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_no_args(self):
         r1 = Ractangle()
-        rb2 = Ractangle()
+        r2 = Ractangle()
         self.assertEqual(r1.id, r2.id - 1)
 
     def test_none(self):
