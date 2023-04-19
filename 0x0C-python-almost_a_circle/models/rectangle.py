@@ -27,53 +27,57 @@ class Rectangle(Base):
         super().__init__(id)
 
         @property
-        def get_width(self):
+        def width(self):
             """ Set/get the width """
             return self.__width
 
         @width.setter
-        def set_width(self, width):
-            if width <= 0:
+        def width(self, val):
+            """ width setter """
+            if val <= 0:
                 raise ValueError('width must be > 0')
-            if width is not type(int):
+            if type(val) is not int:
                 raise TypeError('width must be an integer')
-            self.__width = width
+            self.__width = val
 
         @property
-        def get_height(self):
+        def height(self):
             """ Set/get the height """
             return self.__height
 
         @height.setter
-        def set_height(self, height):
-            if height <= 0:
+        def height(self, val):
+            """ height setter """
+            if vak <= 0:
                 raise ValueError('height must be > 0')
-            if height is not type(int):
+            if val is not type(int):
                 raise TypeError("height must be an integer")
-            self.__height = height
+            self.__height = val
 
         @property
-        def get_x(self):
+        def x(self):
             """ Set/get the x element """
             return self.__x
 
         @x.setter
-        def set_x(self, x):
-            if x < 0:
+        def x(self, val):
+            """ x setter """
+            if val < 0:
                 raise ValueError('x must be >= 0')
-            if x is not type(int):
+            if val is not type(int):
                 raise TypeError("x must be an integer")
-            self.__x = x
+            self.__x = val
 
         @property
-        def get_y(self):
+        def y(self):
             """ Set/get the y element """
             return self.__y
 
         @y.setter
-        def set_y(self, y):
-            if y < 0:
+        def y(self, val):
+            """ y setter """
+            if val < 0:
                 raise ValueError('y must be >= 0')
-            if y is not type(int):
+            if val is not type(int):
                 raise TypeError("y must be an integer")
-            self.__y = y
+            self.__y = val

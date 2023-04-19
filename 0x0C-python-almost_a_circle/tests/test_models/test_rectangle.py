@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Defines unittests for base class
 Unittest classes:
-    TestRectangleInstantiation - line 16 
+    TestRectangle_instantiation - line 16 
 """
 import io
 import sys
@@ -10,16 +10,15 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-class TestRectangleInstantiation(unittest.TestCase):
+class TestRectangle_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
-    def rect_is_base(self):
+    def rectangle_is_base(self):
         self.assertIsInstance(Rectangle(20, 5), Base)
 
     def test_no_args(self):
-        _r1 = Rectangle()
-        _r2 = Rectangle()
-        self.assertEqual(_r1.id, _r2.id - 1)
+        with self.assertRaises(TypeError):
+            Rectangle()
 
     def test_none(self):
         _r1 = Rectangle(None)
