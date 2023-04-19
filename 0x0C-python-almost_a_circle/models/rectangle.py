@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Class rectangle that inherits from base """
-
 from models.base import Base
 
 
@@ -27,58 +26,58 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-        @property
-        def width(self):
-            """ Set/get the width """
-            return self.__width
+    @property
+    def width(self):
+        """ Set/get the width """
+        return self.__width
 
-        @width.setter
-        def width(self, val):
-            """ width setter """
-            if type(val) != int:
-                raise TypeError('width must be an integer')
-            if val <= 0:
-                raise ValueError('width must be > 0')
-            self.__width = val
+    @width.setter
+    def width(self, val):
+        """ width setter """
+        if type(val) != int:
+            raise TypeError('width must be an integer')
+        if val <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = val
 
-        @property
-        def height(self):
-            """ Set/get the height """
-            return self.__height
+    @property
+    def height(self):
+        """ Set/get the height """
+        return self.__height
 
-        @height.setter
-        def height(self, val):
-            """ height setter """
-            if type(val) != int:
-                raise TypeError("height must be an integer")
-            if val <= 0:
-                raise ValueError('height must be > 0')
-            self.__height = val
+    @height.setter
+    def height(self, val):
+        """ height setter """
+        if type(val) != int:
+            raise TypeError("height must be an integer")
+        if val <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = val
 
-        @property
-        def x(self):
-            """ Set/get the x element """
-            return self.__x
+    @property
+    def x(self):
+        """ Set/get the x element """
+        return self.__x
 
-        @x.setter
-        def x(self, val):
-            """ x setter """
-            if type(val) != int:
-                raise TypeError("x must be an integer")
-            if val < 0:
-                raise ValueError('x must be >= 0')
-            self.__x = val
+    @x.setter
+    def x(self, val):
+        """ x setter """
+        if type(val) != int:
+            raise TypeError("x must be an integer")
+        if val < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = val
 
-        @property
-        def y(self):
-            """ Set/get the y element """
-            return self.__y
+    @property
+    def y(self):
+        """ Set/get the y element """
+        return self.__y
 
-        @y.setter
-        def y(self, val):
-            """ y setter """
-            if type(val) != int:
-                raise TypeError("y must be an integer")
-            if val < 0:
-                raise ValueError('y must be >= 0')
-            self.__y = val
+    @y.setter
+    def y(self, val):
+        """ y setter """
+        if type(val) != int:
+            raise TypeError("y must be an integer")
+        if val < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = val
