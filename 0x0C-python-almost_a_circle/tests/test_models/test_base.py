@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-""" Defines unittests for base class """
+""" Defines unittests for base class
+Unittest classes:
+    TestBaseInstantiation - line 15 
+"""
 import os
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
 
-class TestBase_instantiation(unittest.TestCase):
+class TestBaseInstantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def test_no_args(self):

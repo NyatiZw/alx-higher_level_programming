@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Defines unittests for base class
 Unittest classes:
-    TestRectangle_instantiation - line 16 
+    TestRectangleInstantiation - line 16 
 """
 import io
 import sys
@@ -10,7 +10,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-class TestRectangle_instantiation(unittest.TestCase):
+class TestRectangleInstantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def rect_is_base(self):
