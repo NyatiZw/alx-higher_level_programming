@@ -5,6 +5,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """ Intestates a new class """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initialize the rectangle class
         Args:
@@ -12,6 +14,11 @@ class Rectangle(Base):
             height: height element of rectangle
             x: integer value
             y: integer value
+        Raises:
+            TypeError: If width or height is not integer
+            ValueError: if width or height is less than or equal to zero
+            TypeError: if x or y is not an integer
+            ValueError: if x or y is less than zero
         """
         super().__init__(id)
         self.width = width
