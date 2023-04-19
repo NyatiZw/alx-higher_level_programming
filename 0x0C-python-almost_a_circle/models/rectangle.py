@@ -99,3 +99,7 @@ class Rectangle(Base):
                     j += 1
             print()
             i += 1
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                self.y, self.width, self.height)
