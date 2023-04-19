@@ -40,8 +40,8 @@ class Rectangle(Base):
             self.__width = width
 
         @property
-            """ Set/get the width """
         def get_height(self):
+            """ Set/get the height """
             return self.__height
 
         @height.setter
@@ -53,8 +53,8 @@ class Rectangle(Base):
             self.__height = height
 
         @property
-            """ Set/get the width """
         def get_x(self):
+            """ Set/get the x element """
             return self.__x
 
         @x.setter
@@ -66,8 +66,8 @@ class Rectangle(Base):
             self.__x = x
 
         @property
-            """ Set/get the width """
         def get_y(self):
+            """ Set/get the y element """
             return self.__y
 
         @y.setter
