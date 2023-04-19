@@ -71,7 +71,7 @@ class Rectangle(Base):
             return self.__y
 
         @y.setter
-        def set(self, y):
+        def set_y(self, y):
             if y < 0:
                 raise ValueError('y must be >= 0')
             if y is not type(int):
