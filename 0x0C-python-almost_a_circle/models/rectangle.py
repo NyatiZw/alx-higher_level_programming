@@ -50,7 +50,7 @@ class Rectangle(Base):
             """ height setter """
             if vak <= 0:
                 raise ValueError('height must be > 0')
-            if val is not type(int):
+            if type(val) is not int:
                 raise TypeError("height must be an integer")
             self.__height = val
 
@@ -64,7 +64,7 @@ class Rectangle(Base):
             """ x setter """
             if val < 0:
                 raise ValueError('x must be >= 0')
-            if val is not type(int):
+            if type(val) is not int:
                 raise TypeError("x must be an integer")
             self.__x = val
 
@@ -78,6 +78,6 @@ class Rectangle(Base):
             """ y setter """
             if val < 0:
                 raise ValueError('y must be >= 0')
-            if val is not type(int):
+            if type(val) is not int:
                 raise TypeError("y must be an integer")
             self.__y = val
