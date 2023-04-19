@@ -10,6 +10,9 @@ from models.rectangle import Rectangle
 class TestRectangle_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
+    def rect_is_base(self):
+        self.assertIsInstance(Rectangle(20, 5), Base)
+
     def test_no_args(self):
         _r1 = Ractangle()
         _r2 = Ractangle()
