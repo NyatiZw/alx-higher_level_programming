@@ -13,22 +13,22 @@ from models.rectangle import Rectangle
 class TestRectangle_instantiation(unittest.TestCase):
     """ Unittesting for base class """
 
-    def rectangle_is_base(self):
+    def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(20, 5), Base)
 
     def test_no_args(self):
         with self.assertRaises(TypeError):
             Rectangle()
 
-    def test_none(self):
-        _r1 = Rectangle(None)
-        _r2 = Rectangle(None)
-        self.assertEqual(_r1.id, _r2.id - 1)
+    def test_two_args(self):
+        r1 = Rectangle(20, 5)
+        r2 = Rectangle(3, 17)
+        self.assertEqual(r1.id, r2.id - 1)
 
-    def test_public_id(self):
-        _r1 = Rectangle(7)
-        _r1.id = 1
-        self.assertEqual(1, r1.id)
+    def test_three_args(self):
+        r1 = Rectangle(7, 5, 3)
+        r2 = Rectangle(5, 2, 9)
+        self.assertEqual(r1.id, r2.id - 1)
 
     def test_string_id(self):
         self.assertEqual("World", Rectangle("World").id)
