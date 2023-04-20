@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Intestaition of Square class """
     def __init__(self, size, x=0, y=0, id=None):
@@ -60,5 +61,15 @@ class Square(Rectangle):
                 else:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """ Dictionary  of attributes """
+        list_attributes = ['id', 'size', 'x', 'y']
+        dictionary_result = {}
 
+        for key in list_attributes:
+            if key == 'size':
+                dictionary_result[key] = getattr(self, 'width')
+            else:
+                dictionary_result[key] = getattr(self, key)
 
+        return dictionary_result
