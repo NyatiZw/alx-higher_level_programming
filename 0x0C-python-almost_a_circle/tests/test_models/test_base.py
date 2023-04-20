@@ -13,19 +13,19 @@ class TestBaseInstantiation(unittest.TestCase):
     """ Unittesting for base class """
 
     def test_no_args(self):
-        _b1 = Base()
-        _b2 = Base()
-        self.assertEqual(_b1.id, _b2.id - 1)
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_none(self):
-        _b1 = Base(None)
-        _b2 = Base(None)
-        self.assertEqual(_b1.id, _b2.id - 1)
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_public_id(self):
-        _b1 = Base(7)
-        _b1.id = 1
-        self.assertEqual(1, _b1.id)
+        b1 = Base(7)
+        b1.id = 1
+        self.assertEqual(1, b1.id)
 
     def test_string_id(self):
         self.assertEqual("World", Base("World").id)
