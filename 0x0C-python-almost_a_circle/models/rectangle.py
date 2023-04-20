@@ -102,12 +102,13 @@ class Rectangle(Base):
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                self.y, self.width, self.height)
+                                                       self.y, self.width,
+                                                       self.height)
 
     def update(self, *args, **kwargs):
         """ update method
         Attributes:
-            id: rectangle id 
+            id: rectangle id
             width: width size
             heigth: height size
             x: element
