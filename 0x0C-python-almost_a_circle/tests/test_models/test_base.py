@@ -3,7 +3,6 @@
 Unittest classes:
     TestBase_instantiation - line 15 
 """
-import os
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
