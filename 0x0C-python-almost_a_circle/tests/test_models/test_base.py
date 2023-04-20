@@ -31,6 +31,3 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(range(5), Base(range(5)).id)
-
-if __name__ == "__main__":
-    unittest.main()
