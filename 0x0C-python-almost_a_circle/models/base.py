@@ -2,6 +2,7 @@
 """ Define class model base """
 import json
 
+
 class Base:
     """ First class named Base
     Attribute:
