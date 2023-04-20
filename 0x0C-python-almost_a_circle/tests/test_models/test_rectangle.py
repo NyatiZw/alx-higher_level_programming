@@ -35,6 +35,3 @@ class TestRectangle_instantiation(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(range(5), Rectangle(range(5)).id)
-
-if __name__ == "__main__":
-    unittest.main()
