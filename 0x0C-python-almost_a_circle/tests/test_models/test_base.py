@@ -11,13 +11,12 @@ from models.rectangle import Rectangle
 
 class TestBase_instantiation(unittest.TestCase):
     """ Unittesting for base class """
-
     def test_no_args(self):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
 
-    def test_none(self):
+    def test_none_id(self):
         b1 = Base(None)
         b2 = Base(None)
         self.assertEqual(b1.id, b2.id - 1)
@@ -32,7 +31,6 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(range(5), Base(range(5)).id)
-
 
 if __name__ == "__main__":
     unittest.main()
