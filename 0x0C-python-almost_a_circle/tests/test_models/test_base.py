@@ -4,7 +4,6 @@ Unittest classes:
     TestBase_instantiation - line 15 
 """
 
-
 import unittest
 from models.base import Base
 
@@ -33,6 +32,17 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(range(5), Base(range(5)).id)
 
     def test_NaN(self):
-        b1 = Base()
-        b1.id = "#"
-        self.assertEqual("#", b1.id)
+        self.assertNotEqual(float('nan'), Base(float('nan')).id))
+
+    def test_bytes_id(self):
+        self.assertEqual(b'Hello', Base(b'Hello').id)
+
+    def test_tuple_id(self):
+        self.assertEqual((4, 6), Base((4, 6)).id)
+
+    def test_two_args(self):
+        with self.assertRaise(TypeError):
+            Base(4, 5)
+
+if __name__ == "__main__":
+    unittest.main()
