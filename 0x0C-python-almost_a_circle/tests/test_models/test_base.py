@@ -114,3 +114,9 @@ class TestBase_create(unittest.TestCase):
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
         self.assertIsNot(r1, r2)
+
+    def test_create_square_equals(self):
+        s1 = Square(3, 7, 9, 2)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertNotEqual(s1, s2)
