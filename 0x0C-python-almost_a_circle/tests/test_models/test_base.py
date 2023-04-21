@@ -32,15 +32,15 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(range(5), Base(range(5)).id)
 
     def test_NaN(self):
-        self.assertNotEqual(float('nan'), Base(float('nan')).id))
+        self.assertNotEqual(float('nan'), Base(float('nan')).id)
 
     def test_bytes_id(self):
-        self.assertEqual(b'Hello', Base(b'Hello').id)
+        self.assertEqual('Hello', Base('Hello').id)
 
     def test_tuple_id(self):
         self.assertEqual((4, 6), Base((4, 6)).id)
 
     def test_two_args(self):
-        with self.assertRaise(TypeError):
+        with self.assertRaises(TypeError):
             Base(4, 5)
 
