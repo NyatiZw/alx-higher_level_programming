@@ -120,3 +120,16 @@ class TestBase_create(unittest.TestCase):
         s1_dictionary = s1.to_dictionary()
         s2 = Square.create(**s1_dictionary)
         self.assertNotEqual(s1, s2)
+
+class TestBase_load_from_file(unittest.TestCase):
+    """ Testing load_from_file method """
+
+    def test_load_from_file_first_rectangle(self):
+        r1 = Rectangle(5, 4, 7, 8, 1)
+        r2 = Rectangle(3, 6, 8, 2, 9)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangle_output = Rectangle.load_from_file()
+        self.assertEqual(str(r1), str(list_rectangle_output[0]))
+
+if __name__ == "__main__":
+    unittest.main()
