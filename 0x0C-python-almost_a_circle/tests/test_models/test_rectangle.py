@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+
 """ Defines unittests for base class
 Unittest classes:
     TestRectangle_instantiation - line 16 
 """
+
+
+
+import io
 import sys
 import unittest
-from models.base import Base
 from models.rectangle import Rectangle
 
 
