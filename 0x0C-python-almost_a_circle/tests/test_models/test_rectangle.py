@@ -11,18 +11,18 @@ from models.rectangle import Rectangle
 class TestRectangle_instantiation(unittest.TestCase):
     """ unit testing rectangle model """
 
-    def test_rectangle_is_base(self):
+    def test_rect_base(self):
         self.assertIsInstance(Rectangle(5, 1), Base)
 
     def test_many_args(self):
         with self.assertRaises(TypeError):
             Rectangle(1, 3, 4, 6, 7, 9)
 
-    def test_width_private(self):
+    def test_w_private(self):
         with self.assertRaises(AttributeError):
             print(Rectangle(2, 2, 0, 0, 1).__width)
 
-    def test_height_private(self):
+    def test_h_private(self):
         with self.assertRaises(AttributeError):
             print(Rectangle(2, 2, 0, 0, 1).__height)
 
@@ -41,3 +41,16 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_h_getter(self):
         r = Rectangle(6, 2, 1, 8, 5)
         self.assertEqual(2, r.height)
+
+    def test_x_setter(self):
+        r = Rectangle(9, 1, 5, 9, 2)
+        r.x = 15
+        self.assertEqual(15, r.x)
+
+    def test_y_setter(self):
+        r = Rectangle(4, 2, 6, 8, 1)
+        r.y = 5
+        self.assertEqual(5, r.y)
+
+if __name__ == "__main__":
+    unittest.main()

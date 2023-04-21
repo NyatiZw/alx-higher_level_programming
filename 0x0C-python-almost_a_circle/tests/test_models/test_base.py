@@ -50,7 +50,7 @@ class TestBase_instantiation(unittest.TestCase):
 class TestBase_to_json_string(unittest.TestCase):
     """Testing to_json_string"""
 
-    def test_to_json_string_rectangle(self):
+    def test_to_json_string_rect(self):
         r = Rectangle(10, 6, 3, 5, 8)
         self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
 
@@ -72,7 +72,7 @@ class TestBase_save_to_file(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
 
-    def test_save_to_file_none(self):
+    def test_save_file_none(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as fp:
             self.assertEqual("[]", fp.read())
@@ -93,7 +93,7 @@ class TestBase_from_json_string(unittest.TestCase):
     def test_from_json_string_none(self):
         self.assertEqual('[]', Base.from_json_string(None))
 
-    def test_from_json_string_more_than_one_arg(self):
+    def test_from_json_string_many_args(self):
         with self.assertRaises(TypeError):
             Base.from_json_string([], 1)
 
@@ -115,7 +115,7 @@ class TestBase_create(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertIsNot(r1, r2)
 
-    def test_create_square_equals(self):
+    def test_create_square(self):
         s1 = Square(3, 7, 9, 2)
         s1_dictionary = s1.to_dictionary()
         s2 = Square.create(**s1_dictionary)
@@ -124,7 +124,7 @@ class TestBase_create(unittest.TestCase):
 class TestBase_load_from_file(unittest.TestCase):
     """ Testing load_from_file method """
 
-    def test_load_from_file_first_rectangle(self):
+    def test_load_from_file_rect(self):
         r1 = Rectangle(5, 4, 7, 8, 1)
         r2 = Rectangle(3, 6, 8, 2, 9)
         Rectangle.save_to_file([r1, r2])
