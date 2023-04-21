@@ -31,3 +31,6 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_range(self):
         self.assertEqual(range(5), Base(range(5)).id)
+
+    def test_NaN(self):
+        self.assertEqual(" ", Base(" ").id)
