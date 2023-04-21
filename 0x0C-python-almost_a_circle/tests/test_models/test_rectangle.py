@@ -52,5 +52,22 @@ class TestRectangle_instantiation(unittest.TestCase):
         r.y = 5
         self.assertEqual(5, r.y)
 
+class TestRectangle_area(unittest.TestCase):
+    """ Testing the rectangle area method """
+
+    def test_small_area(self):
+        r =  Rectangle(5, 2, 0, 1, 0)
+        self.assertEqual(10, r.area())
+
+    def test_large_are(self):
+        r = Rectangle(98999, 98998, 0, 1, 0)
+        self.assertEqual(9800703002, r.area())
+
+    def test_one_arg(self):
+        r = Rectangle(3, 5, 1, 1, 1)
+        with self.assertRaises(TypeError):
+            r.area(1)
+
+
 if __name__ == "__main__":
     unittest.main()
