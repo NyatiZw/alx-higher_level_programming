@@ -64,3 +64,10 @@ class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_no_args(self):
         with self.assertRaises(TypeError):
             Base.to_json_string()
+
+class TestBase_save_to_file(unittest.TestCase):
+    """ Testing save_to_file method"""
+
+    def test_save_to_file_no_agrs(self):
+        with self.assertRaises(TypeError):
+            Rectangle.save_to_file()
