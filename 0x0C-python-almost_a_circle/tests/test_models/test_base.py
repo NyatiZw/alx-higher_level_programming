@@ -71,3 +71,28 @@ class TestBase_save_to_file(unittest.TestCase):
     def test_save_to_file_no_agrs(self):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
+
+    def test_save_to_file_none(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as fp:
+            self.assertEqual("[]", fp.read())
+
+    def test_save_many_args(self):
+        with self.assertRaises(TypeError):
+            Square.save_to_file([], 1)
+
+    @classmethod
+    def _del(self):
+        """ Deletes files"""
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.json")
+        except IOError:
+            pass
