@@ -33,3 +33,11 @@ class TestRectangle_instantiation(unittest.TestCase):
     def test_y_private(self):
         with self.assertRaises(AttributeError):
             print(Rectangle(2, 2, 0, 0, 1).__y)
+
+    def test_w_getter(self):
+        r = Rectangle(3, 8, 5, 9, 1)
+        self.assertEqual(3, r.width)
+
+    def test_h_getter(self):
+        r = Rectangle(6, 2, 1, 8, 5)
+        self.assertEqual(2, r.height)
