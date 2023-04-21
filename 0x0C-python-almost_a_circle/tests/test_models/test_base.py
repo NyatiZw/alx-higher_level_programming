@@ -4,8 +4,11 @@ Unittest classes:
     TestBase_instantiation - line 15 
 """
 
+from models.rectangle import Rectangle
 import unittest
 from models.base import Base
+import os
+from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
@@ -44,3 +47,20 @@ class TestBase_instantiation(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(4, 5)
 
+class TestBase_to_json_string(unittest.TestCase):
+    """Testing to_json_string"""
+
+    def test_to_json_string_rectangle(self):
+        r = Rectangle(10, 6, 3, 5, 8)
+        self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
+
+    def test_to_json_string_type(self):
+        s = Square(10, 6, 3, 5)
+        self.assertEqual(str, type(Base.to_json_string([s.to_dictionary()])))
+
+    def test_to_json_string_empty_list(self):
+        self.assertEqual("[]",Base.to_json_string([]))
+
+    def test_to_json_string_no_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
