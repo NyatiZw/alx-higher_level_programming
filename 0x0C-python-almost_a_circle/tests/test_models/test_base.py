@@ -33,4 +33,6 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(range(5), Base(range(5)).id)
 
     def test_NaN(self):
-        self.assertEqual("?", Base("?").id)
+        b1 = Base(?)
+        b1.id = #
+        self.assertEqual(#, b1).id)
