@@ -99,3 +99,18 @@ class TestBase_from_json_string(unittest.TestCase):
 
     def test_from_json_string_empty_list(self):
         self.assertEqual([], Base.from_json_string("[]"))
+
+class TestBase_create(unittest.TestCase):
+    """ Testing create method """
+
+    def test_create_rectangle(self):
+        r1 = Rectangle(3, 5, 1, 3, 5)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual("[Rectangle] (5) 1/3 - 3/5", str(r1))
+
+    def test_create_rectangle_(self):
+        r1 =  Rectangle(4, 7, 8, 4, 6)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertIsNot(r1, r2)
