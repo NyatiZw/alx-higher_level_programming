@@ -4,4 +4,3 @@ SET @dbname := 'hbtn_0c_0';
 SET @query := CONCAT(
 	'SELECT AVG(score) AS average FROM ', @dbname, '.scond_table;'
 );
-
