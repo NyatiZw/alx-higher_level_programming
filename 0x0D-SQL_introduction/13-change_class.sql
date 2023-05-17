@@ -1,5 +1,5 @@
 -- A Script
--- to update the score of Bob without using id value
+-- to remove all records with score <=5 in second_table
 SET @dbname := 'hbtn_0c_0';
 SET @query := CONCAT(
 	'DELETE FROM ', @dbname, '.second_table WHERE score <= 5;'
