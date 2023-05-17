@@ -5,6 +5,3 @@ SET @query := CONCAT(
 	'SELECT AVG(score) AS average FROM ', @dbname, '.scond_table;'
 );
 
-PREPARE statement FROM @query;
-EXECUTE statement;
-DEALLOCATE PREPARE statement;
