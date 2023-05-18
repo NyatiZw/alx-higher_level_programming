@@ -1,4 +1,7 @@
 -- A Script
--- to compute the score average of all records in the table
+-- to retrieve the score and name colunmns
 USE hbtn_0c_0;
-SELECT score, name FROM second_table WHERE name <> "" ORDER BY score DESC;
+SELECT score, COUNT(*) as number
+FROM second_table
+GROUP BY score 
+ORDER BY number DESC;
