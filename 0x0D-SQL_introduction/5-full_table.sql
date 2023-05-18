@@ -1,3 +1,3 @@
 -- A script
 -- that prints full description of a table
-SHOW TABLE first_table;
+SHOW * FROM first_table;
