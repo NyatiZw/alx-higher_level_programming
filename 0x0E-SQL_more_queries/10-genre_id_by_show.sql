@@ -1,6 +1,5 @@
 -- A script
 -- that lists linked tables
-USE download;
 
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM hbtn_0d_tvshows
