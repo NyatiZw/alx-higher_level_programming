@@ -1,7 +1,6 @@
 -- A script that creates second_table in database
 -- and adds new rows
 CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
-USE hbtn_0c_0;
 CREATE TABLE IF NOT EXISTS second_table (
  id INT,
  name VARCHAR(256),
