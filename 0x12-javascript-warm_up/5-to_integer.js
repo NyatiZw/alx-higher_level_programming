@@ -1,4 +1,5 @@
 #!/usr/bin/node
+/* Script to print an integer */
 
 const { argv } = require('process');
 const firstArgument = argv[2];
