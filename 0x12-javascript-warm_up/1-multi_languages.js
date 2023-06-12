@@ -4,6 +4,6 @@ const a = "C is fun";
 const b = "Python is cool";
 const c = "JavaScript is amazing";
 
-console.log(a);
-console.log(b);
-console.log(c);
+console.log("a\n");
+console.log("b\n");
+console.log("c\n");
