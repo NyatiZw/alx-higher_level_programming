@@ -1,12 +1,11 @@
 #!/usr/bin/node
-import process from 'node:process';
 
-let args = process.agrv;
+const { argv } = require('node:process');
 
-if (args.length === 1) {
-	console.log("Argument found\n");
-} else if (args.length === 0) {
-	console.log("Arguments not found\n");
-} else if (args.length > 1) {
-	console.log("Arguments found\n");
+if (argv.length <= 2) {
+	console.log("No argument");
+} else if (argv.length === 3) {
+	console.log("Argument found");
+} else if (argv.length > 3) {
+	console.log("Arguments found");
 }
