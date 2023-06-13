@@ -12,7 +12,7 @@ if (isNaN(size)) {
 } else {
 	let count = +size;
 	let line = 0;
-	while (count > line) {
+	while (line < count) {
 		let row = "";
 		for (let i = 0; i < count; i++) {
 			row += a;
