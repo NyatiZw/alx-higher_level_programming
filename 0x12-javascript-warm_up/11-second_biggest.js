@@ -18,7 +18,7 @@ if (args.length <= 1) {
 			secondMax = max;
 			max = args[i];
 		} else if (args[i] > secondMax && args[i] !== max) {
-			secondMax = args;
+			secondMax = args[i];
 		}
 	}
 
