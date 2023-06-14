@@ -4,7 +4,7 @@
 module.exports = class Rectangle {
   constructor (w, h) {
     if ((w && h === 0) || (w && h < 0)) {
-      return Rectangle();
+      return {};
     }
     this.width = w;
     this.height = h;
