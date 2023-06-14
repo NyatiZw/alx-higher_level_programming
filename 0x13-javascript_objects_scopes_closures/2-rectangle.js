@@ -2,11 +2,11 @@
 // Class definition of a rectangle
 
 module.exports = class Rectangle {
-	width: number;
-	height: number;
-
-	constructor(w: number, h: number) {
-		this.width = w;
-		this.height = h;
-	}
+  constructor (w, h) {
+    if ((w && h === 0) || (w && h < 0)) {
+      return Rectangle();
+    }
+    this.width = w;
+    this.height = h;
+  }
 };
