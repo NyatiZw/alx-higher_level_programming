@@ -16,12 +16,12 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    let swap === this.width;
-    swap === this.height;
+    let swapWidth === this.height;
+    let swapHeight === this.width;    
   }
 
   double () {
-    this.width ** 2;
-    this.height ** 2;
+    this.width * 2;
+    this.height * 2;
   }
 };
