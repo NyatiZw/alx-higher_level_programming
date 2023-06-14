@@ -16,8 +16,8 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    let swapWidth = this.height;
-    let swapHeight = this.width;
+    const swapWidth = this.height;
+    const swapHeight = this.width;
     this.width = swapWidth;
     this.height = swapHeight;
   }
