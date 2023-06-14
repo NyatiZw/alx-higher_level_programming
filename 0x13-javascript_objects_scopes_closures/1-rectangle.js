@@ -2,11 +2,11 @@
 // Class definition of a rectangle
 
 class Rectangle {
-	width;
-	height;
+  width;
+  height;
 
-	constructor(w, h) {
-		this.width = w;
-		this.height = h;
-	}
+  constructor(w, h) {
+    this.width = w;
+    this.height = h;
+  }
 }
