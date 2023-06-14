@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const Square = require('./5-square');
+const SquareOg = require('./5-square');
 
 
-class Square extends Square {
+class Square extends SquareOg {
   charPrint (c) {
     if (c === undefined) {
       super.print();
