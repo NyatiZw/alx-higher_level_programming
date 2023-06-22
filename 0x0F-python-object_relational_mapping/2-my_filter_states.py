@@ -36,7 +36,7 @@ def my_filter_states(mysql_username, mysql_password, database_name, state_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print("Error in your arguments")
     else:
         username = sys.argv[1]
