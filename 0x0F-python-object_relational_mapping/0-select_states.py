@@ -37,7 +37,7 @@ def list_states(mysql_username, mysql_password, database_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        return
+        print("Error in your arguments")
     else:
         username = sys.argv[1]
         password = sys.argv[2]
