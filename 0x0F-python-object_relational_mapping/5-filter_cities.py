@@ -20,7 +20,7 @@ def list_cities_by_state(mysql_username, mysql_password, database_name, state_na
 
     cursor.execute(query)
 
-    row = cursor.fetchall()
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
