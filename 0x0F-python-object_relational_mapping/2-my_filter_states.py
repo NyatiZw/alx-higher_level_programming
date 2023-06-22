@@ -5,7 +5,7 @@ import sys
 import MySQLdb
 
 
-def my_filter_states(mysql_username, mysql_password, database_name, state_name):
+def my_filter(mysql_username, mysql_password, database_name, state_name):
     # Establish a connection to the MySQL database
     db = MySQLdb.connect(
             host="localhost",
@@ -16,11 +16,12 @@ def my_filter_states(mysql_username, mysql_password, database_name, state_name):
             charset="utf8"
     )
 
-    # Create a cursor object to execute SQL queries
+    # Creatsor object to execute SQL queries
     cursor = db.cursor()
 
     # Execute the SQL query to fetch all states
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT * FROM states WHERE name = '{}' \
+            ORDER BY id ASC".format(state_name)
     cursor.execute(query)
 
     # Fetch all the rows returned by query
@@ -43,4 +44,4 @@ if __name__ == "__main__":
         password = sys.argv[2]
         dbname = sys.argv[3]
         state = sys.argv[4]
-        my_filter_states(username, password, dbname, state)
+        my_filter(username, password, dbname, state)
