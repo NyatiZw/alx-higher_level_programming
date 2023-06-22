@@ -16,6 +16,8 @@ def list_cities_by_state(mysql_username, mysql_password, database_name, state_na
     )
 
     cursor = db.cursor()
+
+    # Execute the SQL query to fetch cities by state
     query = "SELECT * FROM cities WHERE state_name = '{}' ORDER BY id ASC".format(state_name)
 
     cursor.execute(query)
