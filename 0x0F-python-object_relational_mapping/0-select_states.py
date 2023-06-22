@@ -22,10 +22,10 @@ def list_states(username, password, dbname):
 
     # Display the results
     for row in rows:
-    print(row)
+        print(row)
 
     # Close the database connection
-    cursor.closr()
+    cursor.close()
     db.close()
 
 if __name__ == "__main__":
