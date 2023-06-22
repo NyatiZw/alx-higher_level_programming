@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Python Script to list all states from a database
+"""Python Script to list all states from a database"""
 
 import sys
 import MySQLdb
@@ -7,8 +7,8 @@ import MySQLdb
 
 def list_states(mysql_username, mysql_password, database_name):
     # Establish a connection to the MySQL database
-    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd=mysql_password, db=database_name, charset="utf8")
-
+    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username,
+            passwd=mysql_password, db=database_name, charset="utf8")
 
     # Create a cursor object to execute SQL queries
     cursor = db.cursor()
