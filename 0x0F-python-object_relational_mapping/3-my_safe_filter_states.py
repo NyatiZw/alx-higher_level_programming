@@ -39,12 +39,12 @@ def safe_filter(mysql_username, mysql_password, database_name, state_name):
     db.close()
 
 
-    __name__ == "__main__":
-        if len(sys.argv) != 5:
-            print("Error in your arguments")
-        else:
-            username = sys.argv[1]
-            password = sys.argv[2]
-            dbname = sys.argv[3]
-            state = sys.argv[4]
-            safe_filter(username, password, dbname, state)
+if __name__ == "__main__":
+    if len(sys.argv) != 5:
+        print("Error in your arguments")
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        dbname = sys.argv[3]
+        state = sys.argv[4]
+        safe_filter(username, password, dbname, state)
