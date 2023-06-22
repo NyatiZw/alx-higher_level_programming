@@ -25,8 +25,8 @@ def list_cities_by_state(mysql_username, mysql_password, database_name, state_na
     for row in rows:
         print(row)
 
-        cursor.close()
-        db.close()
+    cursor.close()
+    db.close()
 
 
 if __name__ == "__main__":
