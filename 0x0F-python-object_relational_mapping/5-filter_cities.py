@@ -33,8 +33,8 @@ if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Error in arguments")
     else:
-        mysql_username = sys.argv[1]
-        mysql_password = sys.argv[2]
-        database_name = sys.argv[3]
-        state_name = sys.argv[4]
-        list_cities_by_state(mysql_username, mysql_password, database_name, state_name)
+        username = sys.argv[1]
+        password = sys.argv[2]
+        dbname = sys.argv[3]
+        state = sys.argv[4]
+        list_cities_by_state(username, password, dbname, state)
