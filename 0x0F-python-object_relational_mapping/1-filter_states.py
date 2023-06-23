@@ -20,7 +20,7 @@ def filter_states(mysql_username, mysql_password, database_name):
     cursor = db.cursor()
 
     # Execute the SQL query to fetch all states
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+    query = SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC
     cursor.execute(query)
 
     # Fetch all the rows returned by query
