@@ -10,7 +10,8 @@ from model_state import Base, State
 if __name__ == '__main__':
     mysql_username, mysql_password, database_name = sys.argv[1:]
 
-    engine = create_engine(f'mysql+mysqldb://{mysql_username}:{mysql_password}@localhost/{database_name}')
+    engine = create_engine(f'mysql+mysqldb://{mysql_username}:{mysql_password}\
+            @localhost/{database_name}')
 
     Session = sessionmaker(bind=engine)
 
