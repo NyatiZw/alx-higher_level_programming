@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     session = Session()
 
-    first_item = session.query(State).oeder_by(State.id).first()
+    first_item = session.query(State).order_by(State.id).first()
 
     if first_item:
         print(f"{first_item.id}: {first_item.name}")
