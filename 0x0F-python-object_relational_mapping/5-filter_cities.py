@@ -18,17 +18,22 @@ def list_cities_by_state(mysql_username, mysql_password, database_name, state_na
     cursor = db.cursor()
 
     # Execute the SQL query to fetch cities by state
-    query = "SELECT cities FROM state WHERE state_name = '{}' ORDER BY id ASC".format(state_name)
+    query = "SELECT cities.name FROM state INNER JOIN cities ON state.i = cities.id WHERE states.name = %s ORDER BY cities.id ASC"
 
-    cursor.execute(query)
+    try:
+        cursor.execute(query, (state_name,))
 
-    rows = cursor.fetchall()
+        rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+        for row in rows:
+            print(row)
 
-    cursor.close()
-    db.close()
+    except MySQLdb.Error as e:
+        print("Error executing SQL query:", e)
+
+    finally:
+        cursor.close()
+        db.close()
 
 
 if __name__ == "__main__":
