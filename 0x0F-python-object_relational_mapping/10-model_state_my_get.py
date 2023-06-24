@@ -17,10 +17,6 @@ if __name__ == '__main__':
     db_url = f'mysql://{mysql_username}:{mysql_password}@localhost:3306/{database_name}'
     engine = create_engine(db_url)
 
-    Base.metadata.bind = engine
-
-    Session = sessionmaker(bind=engine)
-
     session = Session()
 
     state = session.query(State).filter(State.name == state_name).first()
