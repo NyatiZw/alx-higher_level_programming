@@ -9,14 +9,15 @@ if __name__ == '__main__':
     if len(sys.argv) != 5:
         sys.exit(1)
 
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    dbname = sys.argv[3]
     state_name = sys.argv[4]
 
-    db_url = f'mysql://{mysql_username}:{mysql_password}@localhost:3306/{database_name}'
+    db_url = f'mysql://{username}:{password}@localhost:3306/{dbname}'
     engine = create_engine(db_url)
 
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     state = session.query(State).filter(State.name == state_name).first()
