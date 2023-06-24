@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Script to list all State objects in db
+""" Script to list all State objects in db"""
 
 import sys
 from sqlalchemy import create_engine
@@ -16,15 +16,14 @@ if __name__ == '__main__':
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
 
-    engine = create_engine(f'mysql://{mysql_username}:{mysql_password}@localhost:3306/{database_name}')
-
-    Base.metadata.bind = engine
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
+            format(mysql_username, mysql_password, database_name))
 
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    states = session.query(State).order_by(State.id.asc()).all()
+    for instance in session.query(State).order_by(State.id):
+        print("{:d}: {:s}".format(instance.id, instance.name))
 
-    for state in states:
-        print(f"State ID: {state.id}, Name: {state.name}")
+    session.close()
