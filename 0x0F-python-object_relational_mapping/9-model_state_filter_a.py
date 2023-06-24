@@ -18,13 +18,12 @@ if __name__ == '__main__':
     engine = create_engine(f'mysql+mysqldb://{mysql_username}:{mysql_password}\
             @localhost/{database_name}')
 
-    Base.metadata.bind = engine
-
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    states = session.query(State).filter(State.name.like('½a½')).order_by(State.id.asc()).all()
+    states = session.query(State).filter(State.name.like('½a½')) \
+            .order_by(State.id.asc()).all()
 
     for state in states:
         print(f"State ID: {state.id}, Name: {state.name}")
