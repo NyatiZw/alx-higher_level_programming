@@ -14,8 +14,8 @@ if __name__ == '__main__':
     database_name = sys.argv[3]
     state_name = sys.argv[4]
 
-    engine = create_engine(f'mysql://{mysql_username}:{mysql_password}@\
-            localhost:3306/{database_name}')
+    db_url = f'mysql://{mysql_username}:{mysql_password}@localhost:3306/{database_name}'
+    engine = create_engine(db_url)
 
     Base.metadata.bind = engine
 
