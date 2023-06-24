@@ -8,8 +8,6 @@ from model_state import Base, State
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        sys.exit(1)
 
 
     mysql_username = sys.argv[1]
