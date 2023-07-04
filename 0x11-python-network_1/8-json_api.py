@@ -10,16 +10,22 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    url ='http://0.0.0.0:5000/search_user'
-    letter = argv[1] if len(argv) > 1 else ""
+    url = 'http://0.0.0.0:5000/search_user'
 
-    resp = requests.post(url, data={'q': letter})
+    if len(argv) == 1:
+        letter = "" 
+    else:
+        letter = argv[1]
+
+    data = {'q': letter}
+
+    resp = requests.post(url, data)
 
     try:
-        data = response.json()
-        if isinstance(data, dict):
-            if 'id' in data and 'name' in data:
-                print("[{}] {}".format(data['id'], data['name']))
+        dic = resp.json()
+        if isinstance(dic, dict):
+            if 'id' in dic and 'name' in dic:
+                print("[{}] {}".format(dic['id'], dic['name']))
             else:
                 print("No result")
         else:
