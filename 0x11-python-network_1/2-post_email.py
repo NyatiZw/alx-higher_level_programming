@@ -13,10 +13,10 @@ if __name__ == "__main__":
     email = {'email': argv[2]}
 
     data = urllib.parse.urlencode(email).encode('utf-8')
-    req = urllib.request.Request(url, data, method='POST')
+    req = urllib.request.Request(url, data=data, method='POST')
 
     with urllib.request.urlopen(req) as response:
         body = response.read().decode('utf-8')
 
-    print("Your email is:")
+    print("Your email is: ")
     print(body)
