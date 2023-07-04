@@ -8,14 +8,7 @@ from requests import get
 
 
 if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-
-    res = get(url)
-    body = res.text
-
-    res_type = type(body).__name__
-    formatted_body = f"- type: {res_type}"
-
+    res = get('https://alx-intranet.hbtn.io/status')
     print("Body response:")
-    print(formatted_body)
-    print ("- content:", body)
+    print('\t- type:', type(res.text))
+    print ('\t- content:',res.text)
