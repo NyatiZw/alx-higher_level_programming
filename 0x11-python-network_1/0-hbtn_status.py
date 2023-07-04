@@ -4,14 +4,14 @@ Script to fetch https resources
 """
 
 
-import urllib
+import urllib.request
 
 url = "https://alx-intranet.hbtn.io/status"
 
 with urllib.request.urlopen(url) as response:
     body = response.read().decode('utf-8')
 
-line = body.splitlines()
+lines = body.splitlines()
 formatted_body = '\n'.join(['\t' + line for line in lines])
 print(formatted_body)
 
