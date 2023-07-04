@@ -11,8 +11,8 @@ url = "https://alx-intranet.hbtn.io/status"
 with urllib.request.urlopen(url) as response:
     body = response.read()
     content_type = type(body)
-    content = body.decode('utf-8')
-    utf8_content = content
+    content = repr(body)
+    utf8_content = body.decode('utf-8')
 
 print("Body response:")
 print(f"\t- type: {content_type}")
