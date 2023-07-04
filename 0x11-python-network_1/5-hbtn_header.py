@@ -10,10 +10,6 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email = sys.argv[1]
-
-    data = {"email": email}
-    response = requests.post(url, data=data)
-
-    print("Response body:")
-    print(response.text)
+    response = requests.get(url)
+    x_request_id = response.headers.get('X-Request-Id')
+    print(x_request_id)
