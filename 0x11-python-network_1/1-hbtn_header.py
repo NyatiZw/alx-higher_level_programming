@@ -4,9 +4,9 @@ Script that takes in a url, sends request to url and displays x-request
 """
 
 import urllib.request
-import sys
+from sys import argv
 
-url = sys.argv[1]
+url = argv[1]
 
 with urllib.request.urlopen(url) as response:
     headers = response.headers
