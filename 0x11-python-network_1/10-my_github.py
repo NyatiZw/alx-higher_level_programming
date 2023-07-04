@@ -14,7 +14,7 @@ if __name__ == "__main__":
     token = sys.argv[2]
 
     url = "https://api.github.com/user"
-    auth = HTTPBasicAuth(usrname , token)
+    auth = HTTPBasicAuth(usrname, token)
 
     response = requests.get(url, auth=auth)
     if response.status_code == 200:
