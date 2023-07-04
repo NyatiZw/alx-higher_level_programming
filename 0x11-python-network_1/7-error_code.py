@@ -5,11 +5,11 @@ Script to send a request to a URL and display the response body
 
 
 import requests
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    url = argv[1]
 
     response = requests.get(url)
 
