@@ -4,11 +4,11 @@ Script to fetch https resources
 """
 
 
-import requests
+from requests import get
 
 url = "https://alx-intranet.hbtn.io/status"
 
-res = requests.get(url)
+res = get(url)
 body = res.text
 
 res_type = type(body).__name__
