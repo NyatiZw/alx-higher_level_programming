@@ -3,15 +3,19 @@
 
 const request = require('request');
 
-function getMovieTitle(movieId) {
-  const apiUrl = 'https://swapi-api.alx-tools.com/api/films/${movieId}';
-
+function countMoviesWithCharacter(apiUrl, characterId) {
   request.get(apiUrl, (error, response, body) => {
     if (error) {
       console.error(error);
+    } else if (response.statusCode !== 200) {
+      console.error(error);
     } else {
-      const movieData = JSON.parse(body);
-      console.log(movieData.title);
+      const filmsData = JSON.parse(body).results;
+      const moviesWithCharacter = filmsData.filter((movie) =>
+        movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
+      );
+
+      console.log(moviesWithCharacter.length);
     }
   });
 }
@@ -20,6 +24,8 @@ function getMovieTitle(movieId) {
 if (process.argv.length < 3) {
   console.error(error);
 } else {
-  const movieId = process.argv[2];
-  getMovieTtile(movieId);
+  const apiUrl = process.argv[2];
+  const characterId = 18;
+
+  countMoviesWithCharacter(apiUrl, characterId);
 }
