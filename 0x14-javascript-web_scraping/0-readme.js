@@ -15,7 +15,7 @@ function readFileContent(filePath) {
 
 // Check if the file path argument is provided
 if (process.argv.length < 3) {
-  console.error('Usage: node read_file.js <file_path>');
+  console.error(err);
 } else {
   const filePath = process.argv[2];
   readFileContent(filePath);
