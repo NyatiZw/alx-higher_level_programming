@@ -9,8 +9,6 @@ function getMovieTitle(movieId) {
   request.get(apiUrl, (error, response, body) => {
     if (error) {
       console.error(error);
-    } else if (response.statusCode !== 200) {
-      console.error(error)
     } else {
       const movieData = JSON.parse(body);
       console.log(movieData.title);
