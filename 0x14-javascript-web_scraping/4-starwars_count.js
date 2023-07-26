@@ -7,8 +7,6 @@ function countMoviesWithCharacter(apiUrl, characterId) {
   request.get(apiUrl, (error, response, body) => {
     if (error) {
       console.error(error);
-    } else if (response.statusCode !== 200) {
-      console.error(error);
     } else {
       const filmsData = JSON.parse(body).results;
       const moviesWithCharacter = filmsData.filter((movie) =>
