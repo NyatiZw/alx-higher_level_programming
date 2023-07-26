@@ -3,37 +3,25 @@
 //script to compute number of tasks completed by userid
 
 const request = require('request');
+const apiUrl = process.argv[2];
 
-function countCompletedTasks(apiUrl) {
-  request.get(apiUrl, { json: true }, (error, response, body) => {
-    if (error) {
+request(apiUrl, function (error, response, body) {
+  if (error) {
       console.error(error);
-    } else {
-      const completedTasks = {};
-
-      // Count completed tasks for each user
-      body.forEach((task) => {
-        if (task.completed) {
-         if (!completedTasks[task.userId]) {
-          completedTasks[task.userId] = 1;
-         } else {
-           completedTasks[task.userId]++;
-         }
+  } else if (response.statusCode === 200) {
+    const dic = {};
+    const tasks = JSON.parse(body);
+    for (const i in tasks) {
+      if (tasks[i].completed) {
+        if (dic[tasks[i].userId] === undefined) {
+          dic[tasks[i].userId] = 1;
+        } else {
+          dic[tasks[i].userId]++;
+        }
       }
-   });
-
-    //Print the results
-    Object.keys(completedTasks).forEach((userId) => {
-      console.log(`${userId} : ${completedTasks[userId]}`);
-    });
-  }
+    }
+    console.log(dic);
+    } else {
+      console.log('Error code: ' + response.statusCode);
+    }
 });
-}
-
-// Check if the API URL argument is provided
-if (process.argv.length < 3) {
-  console.error(error);
-} else {
-  const apiUrl = process.argv[2];
-  countCompletedTasks(apiUrl);
-}
