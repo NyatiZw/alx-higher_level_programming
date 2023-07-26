@@ -21,4 +21,7 @@ request(apiUrl, function (error, response, body) {
       }
     }
     console.log(dic);
+  } else {
+    console.log('Error code: ' + response.statusCode);
+  }
 });
