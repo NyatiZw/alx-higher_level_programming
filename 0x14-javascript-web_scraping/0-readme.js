@@ -2,6 +2,7 @@
 // Script that reads and prints the content of a file
 
 const fs = require('fs');
+filePath = process.argv[2];
 
 function readFileContent(filePath) {
   fs.readFile(filePath, 'utf-8', (err, data) => {
@@ -13,10 +14,4 @@ function readFileContent(filePath) {
   });
 }
 
-// Check if the file path argument is provided
-if (process.argv.length < 3) {
-  console.error(err);
-} else {
-  const filePath = process.argv[2];
-  readFileContent(filePath);
-}
+readFileContent(filePath);
