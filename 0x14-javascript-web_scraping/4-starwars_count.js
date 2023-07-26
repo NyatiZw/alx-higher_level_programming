@@ -4,7 +4,7 @@
 const request = require('request');
 
 function getMovieTitle(movieId) {
-  const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+  const apiUrl = 'https://swapi-api.alx-tools.com/api/films/${movieId}';
 
   request.get(apiUrl, (error, response, body) => {
     if (error) {
@@ -21,5 +21,5 @@ if (process.argv.length < 3) {
   console.error(error);
 } else {
   const movieId = process.argv[2];
-  getMovieTitle(movieId);
+  getMovieTtile(movieId);
 }
